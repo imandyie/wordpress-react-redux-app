@@ -1,1 +1,4 @@
-export const apiUrl: 'http://imandy.ie/wp-json/wp/v2';
+export const url = {
+  basename: '/',
+  api: 'http://imandy.ie/wp-json/wp/v2'
+}
