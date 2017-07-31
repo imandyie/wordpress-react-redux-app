@@ -1,0 +1,1 @@
+export const apiUrl: 'http://imandy.ie/wp-json/wp/v2';
