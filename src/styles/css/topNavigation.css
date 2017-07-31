@@ -17,6 +17,10 @@
   -moz-box-shadow: none !important;
   box-shadow: none !important;
   padding: 10px 70px !important;
+  -webkit-transition: padding 0.2s ease-in-out;
+  -moz-transition: padding 0.2s ease-in-out;
+  -o-transition: padding 0.2s ease-in-out;
+  transition: padding 0.2s ease-in-out;
 }
 .top-navigation .logo {
   background: url('../../img/logo.png') no-repeat scroll 0 0 transparent;
@@ -25,6 +29,9 @@
   background-size: 125px;
   position: relative;
   top: 10px;
+}
+.top-navigation.is-scrolling {
+  padding: 0px 70px !important;
 }
 .top-navigation-bg {
   -webkit-transition: all 0.2s ease-in-out;
@@ -38,16 +45,16 @@
   width: 100%;
   height: 75px;
   position: fixed;
-  top: -5px;
+  top: 0px;
   z-index: 4;
   opacity: 0;
 }
 .top-navigation-bg.is-scrolling {
-  top: 0px;
   opacity: 0.98;
+  height: 56px;
 }
 .right-navigation {
-  margin-top: 6px;
+  margin-top: 5px;
 }
 .right-navigation button {
   color: #ffffff !important;
