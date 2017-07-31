@@ -1,0 +1,44 @@
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+.large-header {
+  transform: translate3d(0px, 0px, 0px);
+  background-position: center center;
+  background-size: cover;
+}
+.large-header > .row {
+  height: 100%;
+  position: relative;
+  top: 200px;
+  z-index: 22;
+  margin: 0px;
+}
+.large-header > .row h3 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+}
+.large-header:after,
+.large-header:before {
+  content: "";
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+}
+.large-header:before {
+  left: 0px;
+  width: 50%;
+  background: linear-gradient(to right, #000000 0px, rgba(0, 0, 0, 0) 100%);
+}
+.large-header:after {
+  right: 0px;
+  width: 50%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, #000000 100%);
+}

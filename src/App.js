@@ -5,7 +5,9 @@ import store from './store';
 import { url } from './settings';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import './styles/css/app.css';
+import './styles/css/responsive.css';
 
 import TopNavigation from './components/TopNavigation';
 
@@ -30,7 +32,7 @@ class App extends Component {
     this.unsubscribeStore = store.subscribe(this.handleStoreChange);
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     this.unsubscribeStore();
   }
 
