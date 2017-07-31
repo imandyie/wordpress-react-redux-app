@@ -7,6 +7,8 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './styles/css/app.css';
 
+import TopNavigation from './components/TopNavigation';
+
 import Home from './routes/Home';
 import SinglePost from './routes/SinglePost';
 import Login from './routes/Login';
@@ -42,16 +44,19 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <Provider store={store}>
-          <Router basename={url.basename}>
-            <div>
-              <Route exact={true} path="/" component={Home}/>
-              <Route exact={true} path="/post" component={SinglePost}/>
-              <Route exact={true} path="/login" component={Login}/>
-              <Route exact={true} path="/register" component={Register}/>
-            </div>
-          </Router>
-        </Provider>
+        <div>
+          <TopNavigation />
+          <Provider store={store}>
+            <Router basename={url.basename}>
+              <div>
+                <Route exact={true} path="/" component={Home}/>
+                <Route exact={true} path="/post" component={SinglePost}/>
+                <Route exact={true} path="/login" component={Login}/>
+                <Route exact={true} path="/register" component={Register}/>
+              </div>
+            </Router>
+          </Provider>
+        </div>
       </MuiThemeProvider>
     );
   }

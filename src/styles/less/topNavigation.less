@@ -1,0 +1,50 @@
+@import './common/styles.less';
+@import './common/colors.less';
+@import './common/mixins.less';
+
+@headerBoxShadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+.top-navigation {
+  position: fixed !important;
+  top: -3px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+  background: transparent !important;
+  .no-box-shadow();
+  padding: 10px 70px !important;
+
+  .logo {
+    background: url('../../img/logo.png') no-repeat scroll 0 0 transparent;
+    width: 130px;
+    height: 25px;
+    background-size: 125px;
+    position: relative;
+    top: 10px;
+  }
+}
+
+.top-navigation-bg {
+  .transition(all 0.2s ease-in-out);
+  .box-shadow(@headerBoxShadow);
+  background-color: @orange;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: -5px;
+  z-index: 4;
+  opacity: 0;
+
+  &.is-scrolling {
+    top: 0px;
+    opacity: 0.98;
+  }
+}
+
+.right-navigation {
+  margin-top: 6px;
+
+  button {
+    color: @white !important;
+  }
+}

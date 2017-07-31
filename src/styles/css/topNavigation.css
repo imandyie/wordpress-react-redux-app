@@ -1,0 +1,54 @@
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+.top-navigation {
+  position: fixed !important;
+  top: -3px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  padding: 10px 70px !important;
+}
+.top-navigation .logo {
+  background: url('../../img/logo.png') no-repeat scroll 0 0 transparent;
+  width: 130px;
+  height: 25px;
+  background-size: 125px;
+  position: relative;
+  top: 10px;
+}
+.top-navigation-bg {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  background-color: #ff9500;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: -5px;
+  z-index: 4;
+  opacity: 0;
+}
+.top-navigation-bg.is-scrolling {
+  top: 0px;
+  opacity: 0.98;
+}
+.right-navigation {
+  margin-top: 6px;
+}
+.right-navigation button {
+  color: #ffffff !important;
+}

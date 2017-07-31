@@ -1,0 +1,45 @@
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow:    @string;
+  box-shadow:         @string;
+}
+
+.no-box-shadow () {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow:    none !important;
+  box-shadow:         none !important;
+}
+
+.transition (@string) {
+  -webkit-transition: @string;
+  -moz-transition:    @string;
+  -o-transition:      @string;
+  transition:         @string;
+}
+
+.border-radius (@string) {
+  border-radius: @string;
+  -moz-border-radius: @string;
+  -webkit-border-radius: @string;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background () {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
+}

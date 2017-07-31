@@ -1,24 +1,46 @@
-.App {
-  text-align: center;
-}
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-.App-intro {
-  font-size: large;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: 468px 0;
   }
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+body {
+  background-color: #f3f3f3;
+  font-family: sans-serif, arial;
+  font-size: 13px;
+  margin: 0px;
+}
+.top-navigation-progress-bar {
+  position: fixed !important;
+  top: 0px;
+  z-index: 99;
+}
+.raised-wrapper {
+  position: relative;
+  background-color: #f3f3f3;
+  z-index: 3;
+}
+.raised-wrapper.post-wrapper {
+  margin-top: -60px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+#main-content {
+  width: 100%;
+  margin: 0px;
 }
