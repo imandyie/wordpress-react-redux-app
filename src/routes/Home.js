@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { ActionCreators } from '../actions'
+
 import Header from '../components/Header';
 
 let headerBgImage = require('../img/bg.jpg');
 
 class Home extends Component {
+
+  componentWillMount() {
+    if (!this.props.homePosts.length) {
+      this.props.fetchHomePosts();
+    }
+  }
 
   render() {
     return(
@@ -31,4 +41,15 @@ class Home extends Component {
   }
 }
 
-export default Home;  
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(ActionCreators, dispatch);
+}
+
+function mapStateToProps(state) {
+  return {
+    homePosts: state.homePosts,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home); 
