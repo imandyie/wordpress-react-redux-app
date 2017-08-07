@@ -1,0 +1,62 @@
+@import './common/mixins.less';
+@import './common/colors.less';
+
+@rowBoxShadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
+
+.posts-list {
+  padding-top: 20px;
+
+  .post-row {
+    margin-bottom: 20px;
+    background-color: @white;
+    .box-shadow(@rowBoxShadow);
+
+    .paper {
+      height: 130px;
+      width: 100%;
+      margin: 20px 0px 17px 10px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 15px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+      }
+    }
+    
+    .post-right {
+      padding-left: 20px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 0px;
+
+      a {
+        font-size: 22px;
+        line-height: 1.4em;
+        text-decoration: none;
+        color: @black;
+      }
+    }
+
+    .post-description {
+      color: @gray07;
+      font-size: 14px;
+      font-family: Roboto,Helvetica,Arial,sans-serif;
+      font-weight: 300;
+      line-height: 1.5em;
+    }
+
+    &.placeholder-row {
+      .animated-background();
+      .paper {
+        background-color: @gray02;
+      }
+    }
+  }
+}

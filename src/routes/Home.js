@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { ActionCreators } from '../actions'
 
 import Header from '../components/Header';
+import PostsListContainer from '../containers/PostsListContainer';
 
 let headerBgImage = require('../img/bg.jpg');
 
@@ -28,7 +29,7 @@ class Home extends Component {
           <div className="container page-content">
             <section id="main-content" className="row">
               <div className="col-lg-8 col-md-12 col-sm-12">
-                Main Content
+                <PostsListContainer posts={this.props.homePosts} />
               </div>
               <div className="sidebar-container col-lg-4 col-md-12 col-sm-12">
                 Sidebar

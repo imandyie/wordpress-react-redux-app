@@ -33,7 +33,6 @@ body {
   position: relative;
   background-color: #f3f3f3;
   z-index: 3;
-  min-height: 900px;
 }
 .raised-wrapper.post-wrapper {
   margin-top: -60px;

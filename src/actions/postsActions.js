@@ -10,7 +10,7 @@ export function fetchHomePosts(postsNumber, postsType, pageNumber) {
                  + '&orderBy=' + homePage.orderBy
   return (dispatch, getState) => {
       axios.get(apiUrl).then(function (response) {
-        console.log(response);
+        dispatch(setHomePosts({posts: response.data}));
       }).catch(function (error) {
         console.log(error);
       });
