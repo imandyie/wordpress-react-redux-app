@@ -14,7 +14,7 @@ class PostsListItem extends Component {
           } />
         </div>
         <div className="post-right col-md-8">
-          <h3><Link to={"/post" + this.props.permalink}>{this.props.title}</Link></h3>
+          <h3><Link to={"/post/" + this.props.permalink}>{this.props.title}</Link></h3>
           <div className="row">
             <div
               className="post-description col-md-12" 

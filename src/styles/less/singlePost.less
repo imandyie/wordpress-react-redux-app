@@ -1,0 +1,27 @@
+@import './common/colors.less';
+@import './common/mixins.less';
+
+.single-post-wrapper {
+  padding-right: 0px;
+  padding-bottom: 40px;
+
+  .post-content {
+    margin-top: 20px;
+    background-color: @white;
+    .box-shadow(0 3px 5px 0 rgba(0,1,1,.1));
+    padding: 40px 40px 48px;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: @gray05;
+    margin-bottom: 30px;
+    min-height: 200px;
+
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 50px;
+      font-size: 30px;
+      line-height: 38px;
+      color: @black;
+    }
+  }
+}

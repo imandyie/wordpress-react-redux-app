@@ -10,6 +10,11 @@
   transform: translate3d(0px, 0px, 0px);
   background-position: center center;
   background-size: cover;
+  background-color: #f9f9f9;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 .large-header > .row {
   height: 100%;
@@ -23,22 +28,4 @@
   text-align: center;
   font-size: 3em;
   font-weight: 700;
-}
-.large-header:after,
-.large-header:before {
-  content: "";
-  top: 0px;
-  position: absolute;
-  height: 100%;
-  z-index: 2;
-}
-.large-header:before {
-  left: 0px;
-  width: 50%;
-  background: linear-gradient(to right, #000000 0px, rgba(0, 0, 0, 0) 100%);
-}
-.large-header:after {
-  right: 0px;
-  width: 50%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, #000000 100%);
 }

@@ -52,7 +52,7 @@ class App extends Component {
             <Router basename={url.basename}>
               <div>
                 <Route exact={true} path="/" component={Home}/>
-                <Route exact={true} path="/post" component={SinglePost}/>
+                <Route exact={true} path="/post/:slug" component={SinglePost}/>
                 <Route exact={true} path="/login" component={Login}/>
                 <Route exact={true} path="/register" component={Register}/>
               </div>
