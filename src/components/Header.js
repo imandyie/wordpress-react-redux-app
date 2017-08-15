@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import '../styles/css/header.css';
 import PropTypes from 'prop-types';
 
+let headerPosition = 0
 class Header extends Component {
-
-  componentWillMount() {
-    this.state = { headerPosition: 0 };
-  }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
@@ -23,15 +20,15 @@ class Header extends Component {
     } else if (e.pageY) {
       scrollPosition = e.pageY;
     }
-    this.setState({headerPosition: scrollPosition / 3});
+    headerPosition = scrollPosition / 3;
   }
 
   render() {
     const transformHeader = {
-      'transform':'translate3d(0,' + this.state.headerPosition +'px,0)',
-      'WebkitTransform':'translate3d(0,' + this.state.headerPosition +'px,0)',
-      'msTransform':'translate3d(0,' + this.state.headerPosition +'px,0)',
-      'OTransform':'translate3d(0,' + this.state.headerPosition +'px,0)'
+      'transform':'translate3d(0,' + headerPosition +'px,0)',
+      'WebkitTransform':'translate3d(0,' + headerPosition +'px,0)',
+      'msTransform':'translate3d(0,' + headerPosition +'px,0)',
+      'OTransform':'translate3d(0,' + headerPosition +'px,0)'
     };
     const headerStyle = {backgroundImage: "url("+this.props.image+")", height: this.props.height};
 

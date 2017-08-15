@@ -8,8 +8,6 @@ import Header from '../components/Header';
 import '../styles/css/singlePost.css';
 import '../styles/css/sidebar.css';
 
-let headerBgImage = require('../img/bg10.jpg');
-
 class SinglePost extends Component {
 
   componentWillMount() {
@@ -29,10 +27,11 @@ class SinglePost extends Component {
     const singlePost = this.props.singlePost;
     const postTitle = singlePost && singlePost.title ? singlePost.title.rendered : '';
     const postContent = singlePost && singlePost.content ? singlePost.content.rendered : '';
+    const postImage = singlePost && singlePost.featured_media_url_large ? singlePost.featured_media_url_large : '';
     return(
       <div>
         <Header
-          image={headerBgImage}
+          image={postImage}
           parallax={false}
           height={400}
         />
