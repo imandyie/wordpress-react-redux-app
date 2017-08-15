@@ -1,6 +1,6 @@
 export const url = {
   basename: '/',
-  api: 'http://imandy.ie/wp-json/wp/v2',
+  api: 'http://imandy.ie/wp-json',
   posts: 'posts',
 }
 

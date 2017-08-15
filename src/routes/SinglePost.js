@@ -11,13 +11,24 @@ import '../styles/css/sidebar.css';
 let headerBgImage = require('../img/bg10.jpg');
 
 class SinglePost extends Component {
+
+  componentWillMount() {
+    const postSlug = this.props.postSlug;
+    this.props.fetchSinglePost(postSlug);
+  }
+
   componentDidMount() {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    },150);
+    window.scrollTo(0, 0);
+  }
+
+  componentWillUnmount() {
+    this.props.setSinglePost({singlePost: {}});
   }
 
   render() {
+    const singlePost = this.props.singlePost;
+    const postTitle = singlePost && singlePost.title ? singlePost.title.rendered : '';
+    const postContent = singlePost && singlePost.content ? singlePost.content.rendered : '';
     return(
       <div>
         <Header
@@ -30,8 +41,8 @@ class SinglePost extends Component {
             <section id="main-content" className="row">
               <div className="single-post-wrapper col-lg-8 col-md-12 col-sm-12">
                 <div className="post-content">
-                  <h1>Title</h1>
-                  <div dangerouslySetInnerHTML={ {__html: "Description"} } />
+                  <h1>{postTitle}</h1>
+                  <div dangerouslySetInnerHTML={ {__html: postContent} } />
                 </div>
               </div>
               <div className="sidebar-container col-lg-4 col-md-12 col-sm-12">

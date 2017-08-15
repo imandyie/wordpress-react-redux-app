@@ -6,3 +6,9 @@ export const homePosts = createReducer({}, {
     return action.posts;
   }
 });
+
+export const singlePost = createReducer({}, {
+  [types.SET_SINGLE_POST](state, action) {
+    return action.singlePost;
+  }
+});

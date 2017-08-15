@@ -11,9 +11,7 @@ let headerBgImage = require('../img/bg.jpg');
 class Home extends Component {
 
   componentWillMount() {
-    if (!this.props.homePosts.length) {
-      this.props.fetchHomePosts();
-    }
+    this.props.fetchHomePosts();
   }
 
   render() {
