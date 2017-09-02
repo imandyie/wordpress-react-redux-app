@@ -20,7 +20,7 @@ class Home extends Component {
         <Header
           image={headerBgImage} 
           title="Welcome To GNOME" 
-          parallax={true} 
+          parallax={false} 
           height={500}
         />
         <div className="raised-wrapper">

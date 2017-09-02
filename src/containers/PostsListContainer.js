@@ -8,16 +8,17 @@ class PostsListContainer extends Component {
     let postItems = [];
     const posts = this.props.posts;
 
-    for(var i = 0; i < posts.length; i++) {
+    posts.map((item, index) =>
       postItems.push(
         <PostsListItem
-          title={posts[i].title.rendered}
-          featuredImage={posts[i].featured_media_url}
-          permalink={posts[i].slug}
-          shortDescription={posts[i].short_description} 
+          key={index}
+          title={item.title.rendered}
+          featuredImage={item.featured_media_url}
+          permalink={item.slug}
+          shortDescription={item.short_description} 
         />
-      );
-    }
+      )
+    );
 
     return(
       <div className="posts-list">

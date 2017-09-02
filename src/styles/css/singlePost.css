@@ -35,3 +35,6 @@
   max-width: 100%;
   height: auto !important;
 }
+.single-post-wrapper .post-content pre {
+  white-space: pre-wrap;
+}

@@ -9,8 +9,10 @@ class PostsListItem extends Component {
     return(
       <div className="post-row row">
         <div className="col-md-4">
-          <Paper className="paper" zDepth={2} children={
-            <img src={this.props.featuredImage} alt={this.props.title} />
+          <Paper className="paper" zDepth={1} children={
+            <Link to={"/post/" + this.props.permalink}>
+              <img src={this.props.featuredImage} alt={this.props.title} />
+            </Link>
           } />
         </div>
         <div className="post-right col-md-8">

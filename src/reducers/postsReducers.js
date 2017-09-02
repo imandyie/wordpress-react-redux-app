@@ -1,7 +1,7 @@
 import createReducer from '../helpers/createReducer'
 import * as types from '../actions/actionTypes'
 
-export const homePosts = createReducer({}, {
+export const homePosts = createReducer([], {
   [types.SET_HOME_POSTS](state, action) {
     return action.posts;
   }

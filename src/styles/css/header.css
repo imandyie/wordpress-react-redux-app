@@ -16,6 +16,34 @@
   -o-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 }
+.large-header:before,
+.large-header:after {
+  content: "";
+  top: 0;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+}
+.large-header:before {
+  left: 0;
+  background: -moz-linear-gradient(left, #000000 0, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(left, #000000 0, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#000000), to(rgba(0, 0, 0, 0)));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #000000), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, #000000 0, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+  width: 40%;
+}
+.large-header:after {
+  right: 0;
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #000000 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #000000 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+  width: 40%;
+}
 .large-header > .row {
   height: 100%;
   position: relative;
